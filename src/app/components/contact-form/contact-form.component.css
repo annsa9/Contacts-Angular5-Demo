@@ -1,0 +1,28 @@
+.submit {
+    text-align: center;
+}
+
+.ng-valid[required], .ng-valid.required, .ng-valid[pattern], .ng-valid.pattern  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.error-class {
+    height: 30px;
+    color: #a94442;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.isActive, .isInactive {
+    cursor: pointer;
+}
+
+.active-button {
+    margin-bottom: 10px;
+}

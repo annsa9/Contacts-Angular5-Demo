@@ -1,18 +1,26 @@
 # Contacts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4 and uses Angular version 5.2.0.
+
+## Online Hosted Link
+[https://annsa9.github.io/](https://annsa9.github.io/)
+
+## Notes
+
+* Make sure if your angular cli is compliant with version 1.7.4.
+* Code is documented with [JSDocs](http://usejsdoc.org/) syntax.
+
+## Installation
+
+```
+git clone https://github.com/annsa9/Contacts-Angular5-Demo.git
+cd Contacts-Angular5-Demo
+npm install
+```
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## Running unit tests
 
@@ -21,6 +29,11 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Deployment
+
+* Run `ng build --prod` to build the project for production server. The build artifacts will be stored in the `dist/` directory.
+* You can host website inside `dist/` using [GitHub Pages](https://pages.github.com/).
 
 ## Further help
 

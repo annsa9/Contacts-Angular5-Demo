@@ -1,0 +1,30 @@
+<section class="main-section">
+    <div class="add-section">
+        <button type="button" class="btn btn-primary" (click)="open()">Add Contact</button>
+    </div>
+    <div [hidden]="contacts.length" style="clear: both">
+        <h1>
+            No contacts to dispaly. Add contact.
+        </h1>
+    </div>
+    <div style="overflow-x:auto; clear: both" [hidden]="!contacts.length">
+        <table id="contacts">
+            <tr>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>PHONE NUMBER</th>
+                <th>STATUS</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let contact of contacts | orderBy:'firstName'">
+                <td>{{contact.firstName+ " "+ contact.lastName}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.phoneNumber}}</td>
+                <td>{{contact.isActive ? 'Active': 'Inactive'}}</td>
+                <td>
+                    <button class="btn btn-primary btn-xs" (click)="editContact(contact)">Edit</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

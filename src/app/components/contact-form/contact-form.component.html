@@ -1,0 +1,83 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{!isEdit ? 'Add contact' : 'Edit contact'}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+  <div class="container">
+    <form #contactForm="ngForm" (ngSubmit)="submitContact()">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" [(ngModel)]="model.firstName"
+         name="firstName" #firstName="ngModel" required pattern="[a-zA-Z]{2,30}">
+        <div class="error-class">
+          <div *ngIf="firstName.errors && (firstName.dirty || firstName.touched)">
+            <div [hidden]="!firstName.errors.required && !firstName.errors.pattern">
+              first Name is invalid!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" [(ngModel)]="model.lastName" 
+        name="lastName" #lastName="ngModel" required pattern="[a-zA-Z]{2,30}">
+        <div class="error-class">
+          <div *ngIf="lastName.errors && (lastName.dirty || lastName.touched)">
+            <div [hidden]="!lastName.errors.required && !lastName.errors.pattern">
+              Last Name is invalid!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" [(ngModel)]="model.email"
+        name="email" #email="ngModel" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+        <div class="error-class">
+          <div *ngIf="email.errors && (email.dirty || email.touched)">
+            <div [hidden]="!email.errors.required && !email.errors.pattern">
+              Email is invalid!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" class="form-control" id="phoneNumber" [(ngModel)]="model.phoneNumber" 
+        name="phoneNumber" #phoneNumber="ngModel" required pattern="[0-9-+]{10,30}">
+        <div class="error-class">
+          <div *ngIf="phoneNumber.errors && (phoneNumber.dirty || phoneNumber.touched)">
+            <div [hidden]="!phoneNumber.errors.required && !phoneNumber.errors.pattern">
+              Phone number is invalid!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group active-button">
+        <label>Status</label>
+        <div class="col-sm-12">
+          <span class="col-sm-6">
+            <input name="isActive" id="isActive" type="radio" [(ngModel)]="model.isActive" 
+            [value]=true [checked]="model.isActive==true" />
+            <label for="isActive" class="isActive">Active</label>
+          </span>
+          <span class="col-sm-6">
+            <input name="isInactive" id="isInactive" type="radio" [(ngModel)]="model.isActive" 
+            [value]=false [checked]="model.isActive==false" />
+            <label for="isInactive" class="isInactive">Inactive</label>
+          </span>
+        </div>
+      </div>
+      <div class="btn btn-default col-sm-12" class="submit">
+        <button type="submit" [disabled]="!contactForm.form.valid" class="btn btn-primary col-sm-6">Submit</button>
+        <!-- <button type="button" class="btn btn-outline-dark col-sm-6" (click)="activeModal.close('Close click')">Cancel</button> -->
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal-footer">
+</div>
