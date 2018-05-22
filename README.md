@@ -5,6 +5,23 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Online Hosted Link
 [https://annsa9.github.io/](https://annsa9.github.io/)
 
+## Directory Structure
+```
+Contacts-Angular5-Demo/
+ ├──config/                        * Our configuration                     
+ ├──src/                           * Our source files that will be compiled to javascript
+ |   ├──app/                       
+ │   │   ├──components/            * Our modular structure components. Each having html, component, css and test file
+ |   |   ├──models/                * Our  main class objects of application with properties
+ |   |   ├──services/              * Our injectable service used for components
+ |   |   ├──utilities/             * User defined or third party utilities
+ |   |   |
+ |   ├──assets/                    * Our project assets containg media files
+ |   ├──environment/               * Our environment variables on the basis of prod/dev environment
+ │   │
+ |   ├──index.html                 * Our entry file for our browser environment
+```
+
 ## Notes
 
 * Make sure if your angular cli is compliant with version 1.7.4.
