@@ -7,8 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Directory Structure
 ```
-Contacts-Angular5-Demo/
- ├──config/                        * Our configuration                     
+Contacts-Angular5-Demo/                  
  ├──src/                           * Our source files that will be compiled to javascript
  |   ├──app/                       
  │   │   ├──components/            * Our modular structure components. Each having html, component, css and test file
@@ -16,7 +15,7 @@ Contacts-Angular5-Demo/
  |   |   ├──services/              * Our injectable service used for components
  |   |   ├──utilities/             * User defined or third party utilities
  |   |   |
- |   ├──assets/                    * Our project assets containg media files
+ |   ├──assets/                    * Our project assets contaning media files
  |   ├──environment/               * Our environment variables on the basis of prod/dev environment
  │   │
  |   ├──index.html                 * Our entry file for our browser environment

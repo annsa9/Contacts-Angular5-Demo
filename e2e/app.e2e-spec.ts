@@ -7,8 +7,8 @@ describe('contacts App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display no contact message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('No contacts to dispaly. Add contact.');
   });
 });
