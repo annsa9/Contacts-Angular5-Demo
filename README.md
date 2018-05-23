@@ -15,7 +15,7 @@ Contacts-Angular5-Demo/
  |   |   ├──services/              * Our injectable service used for components
  |   |   ├──utilities/             * User defined or third party utilities
  |   |   |
- |   ├──assets/                    * Our project assets contaning media files
+ |   ├──assets/                    * Our project assets containing media files
  |   ├──environment/               * Our environment variables on the basis of prod/dev environment
  │   │
  |   ├──index.html                 * Our entry file for our browser environment
@@ -23,7 +23,7 @@ Contacts-Angular5-Demo/
 
 ## Notes
 
-* Make sure if your angular cli is compliant with version 1.7.4.
+* Ensure if your angular cli is compliant with version 1.7.4.
 * Code is documented with [JSDocs](http://usejsdoc.org/) syntax.
 
 ## Installation
