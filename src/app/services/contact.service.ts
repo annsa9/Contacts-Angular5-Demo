@@ -17,14 +17,12 @@ export class contactService {
      */
     submitContact(model): any {
         let contacts = localStorage.getItem('contact');
-        console.log('model', model);
         contacts = JSON.parse(contacts);
         contacts = Object.assign(contacts, model); // Merging new contact with contacts object
 
         contacts = JSON.stringify(contacts);
         localStorage.setItem('contact', contacts);
         let output = localStorage.getItem('contact');
-        console.log('output', JSON.parse(output));
     }
 
     /**
