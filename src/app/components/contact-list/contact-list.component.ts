@@ -31,13 +31,14 @@ export class ContactListComponent implements OnInit {
   getContacts() {
     let contacts = this._contactService.getContacts();
     contacts = JSON.parse(contacts);
-    this.contacts = Object.values(contacts); // Converting object to array
+    this.contacts = Object.values(contacts); // Converting object to array for *ngFor
   }
 
   editContact(contact) {
     console.log(contact);    
     const modalRef = this.modalService.open(ContactFormComponent);
     modalRef.componentInstance.name = 'World';
-    this.events.publish('editContact', contact);
+    let copy = Object.assign({}, contact); // Copying contact to avoid two way binding
+    this.events.publish('editContact', copy);
   }
 }
